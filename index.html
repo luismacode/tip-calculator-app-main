@@ -19,61 +19,75 @@
       </h1>
       <main class="tip-app">
         <div class="tip-app__inner">
-          <form class="form">
-            <div class="form__field">
-              <label class="form__label">Bill</label>
-              <img
-                class="icon-dollar"
-                src="images/icon-dollar.svg"
-                alt="dollar"
-              />
-              <input class="form__input" type="text" placeholder="0" />
+          <div class="row">
+            <div class="column-50">
+              <form class="form">
+                <div class="form__field">
+                  <label class="form__label">Bill</label>
+                  <img
+                    class="icon-dollar"
+                    src="images/icon-dollar.svg"
+                    alt="dollar"
+                  />
+                  <input class="form__input" type="text" placeholder="0" />
+                </div>
+                <div class="form__field">
+                  <p>Select tip %</p>
+                  <div class="form__select">
+                    <button type="button" class="button button--option">
+                      5%
+                    </button>
+                    <button type="button" class="button button--option">
+                      10%
+                    </button>
+                    <button type="button" class="button button--option">
+                      15%
+                    </button>
+                    <button type="button" class="button button--option">
+                      25%
+                    </button>
+                    <button type="button" class="button button--option">
+                      50%
+                    </button>
+                    <input
+                      type="text"
+                      class="button button--custom"
+                      placeholder="Custom"
+                    />
+                  </div>
+                </div>
+                <div class="form__field">
+                  <label>Number of People</label>
+                  <img
+                    class="icon-person"
+                    src="/images/icon-person.svg"
+                    alt="person"
+                  />
+                  <input class="form__input" type="number" placeholder="0" />
+                </div>
+              </form>
             </div>
-            <div class="form__field">
-              <p>Select tip %</p>
-              <div class="form__select">
-                <button type="button" class="button button--select-tip">
-                  5%
+            <div class="column-50">
+              <div class="display">
+                <div>
+                  <div class="display__item">
+                    <p class="display__tip">
+                      <span>Tip Amount</span> <span>/ person</span>
+                    </p>
+                    <p class="display__total">$0.00</p>
+                  </div>
+                  <div class="display__item">
+                    <p class="display__tip">
+                      <span>Total</span> <span>/ person</span>
+                    </p>
+                    <p class="display__total">$0.00</p>
+                  </div>
+                </div>
+                <button type="button" disabled class="button button--reset">
+                  reset
                 </button>
-                <button type="button" class="button button--select-tip">
-                  10%
-                </button>
-                <button type="button" class="button button--select-tip">
-                  15%
-                </button>
-                <button type="button" class="button button--select-tip">
-                  25%
-                </button>
-                <button type="button" class="button button--select-tip">
-                  50%
-                </button>
-                <button type="button" class="button">Custom</button>
               </div>
             </div>
-            <div class="form__field">
-              <label>Number of People</label>
-              <img
-                class="icon-person"
-                src="/images/icon-person.svg"
-                alt="person"
-              />
-              <input class="form__input" type="number" placeholder="0" />
-            </div>
-          </form>
-          <div class="display">
-            <div class="display__item">
-              <p class="display__tip">
-                <span>Tip Amount</span> <span>/ person</span>
-              </p>
-              <p class="display__total">$0.00</p>
-            </div>
-            <div class="display__item">
-              <p class="display__tip">
-                <span>Total</span> <span>/ person</span>
-              </p>
-              <p class="display__total">$0.00</p>
-            </div>
-            <button type="button" class="button button--reset">reset</button>
           </div>
         </div>
       </main>

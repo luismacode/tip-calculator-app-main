@@ -16,8 +16,6 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -30,20 +28,14 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![screenshot-desktop](./screenshots/tip-calculator-app-desktop.jpeg)
+![screenshot-tablets](./screenshots/tip-calculator-app-tablet.jpeg)
+![screenshot-mobile](./screenshots/tip-calculator-app-mobile.jpeg)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [solution]()
+- Live Site URL: [live site](https://luismacode.github.io/tip-calculator-app-main/)
 
 ## My process
 
@@ -54,59 +46,81 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- javascript modules
+- BEM Naming
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+Through the development of this challenge I learned:
 
-To see how you can add code snippets, see below:
+1. Use setCurrency function for convert from number to US currency format
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
+  ```js
+   const setCurrency = (currency) => {
+    return currency.toLocaleString("en-US", {
+    style: "currency",
+    currency: "USD",
+  });
+};
+  ```
+
+2. Use this code snippet for remove the percentage symbol of the tip field and convert  to number.
+
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+  const getTip = (tip) => {
+    return Number(tip.slice(0, -1)) / 100;
+  };
+```
+
+3. I use this code snippet to reset styles that were added when an error occurs or when the value of the fields has been validated.
+
+```js
+  function resetStyles(...inputs) {
+    inputs.forEach((input) => {
+      input.style = "border:none";
+  });
 }
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+4. I use this code snippet to reset values of the fields and and disable the reset button again.
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+```js
+  function resetValues(reset, ...inputs) {
+    reset.setAttribute("disabled", "");
+    nodes.forEach((input) => {
+      input.value = "";
+    });
+  }
+```
+
+5. I Use this small code to add and remove css class when you click an option button.
+
+```js
+  options.forEach((opt) => {
+    option.addEventListener("click", (e) => {
+      options.forEach((option) => {
+        option.classList.remove("button-option--selected");
+      });
+    opttion.classList.add("button-option--selected");
+  }
+```
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+Although this small project is functional in my opinion there is always something to improve so as you learn new more efficient ways of doing things I will update the parts of code that could be improved.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [to-locale-string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString)
+- [for-each-js](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
+- [slice-js](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice)
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Linkedin - [luismachaca](www.linkedin.com/in/luismachaca)
+- Frontend Mentor - [@luismacode](https://www.frontendmentor.io/profile/luismacode)
+- Twitter - [@luismacode](https://www.twitter.com/luismacode)
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+I want to thank the channel called [CodingTube](https://www.youtube.com/watch?v=89TcBf7_s8o) since it served as a guide to facilitate the process of solving this challenge as well as to learn other way to face this challenge and enrich my learning.

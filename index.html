@@ -23,47 +23,64 @@
             <div class="column-50">
               <form class="form">
                 <div class="form__field">
+                  <span class="form__error"></span>
                   <label class="form__label">Bill</label>
                   <img
                     class="icon-dollar"
                     src="images/icon-dollar.svg"
                     alt="dollar"
                   />
-                  <input class="form__input" type="text" placeholder="0" />
+                  <input
+                    class="form__input"
+                    type="text"
+                    placeholder="0"
+                    id="bill"
+                  />
                 </div>
                 <div class="form__field">
                   <p>Select tip %</p>
                   <div class="form__select">
-                    <button type="button" class="button button--option">
+                    <span class="form__error"></span>
+                    <button type="button" class="button button-option">
                       5%
                     </button>
-                    <button type="button" class="button button--option">
+                    <button type="button" class="button button-option">
                       10%
                     </button>
-                    <button type="button" class="button button--option">
+                    <button
+                      type="button"
+                      class="button button-option button-option--selected"
+                    >
                       15%
                     </button>
-                    <button type="button" class="button button--option">
+                    <button type="button" class="button button-option">
                       25%
                     </button>
-                    <button type="button" class="button button--option">
+                    <button type="button" class="button button-option">
                       50%
                     </button>
                     <input
                       type="text"
-                      class="button button--custom"
+                      class="button button-custom"
                       placeholder="Custom"
+                      id="custom"
                     />
                   </div>
                 </div>
                 <div class="form__field">
+                  <span class="form__error"></span>
                   <label>Number of People</label>
                   <img
                     class="icon-person"
                     src="/images/icon-person.svg"
                     alt="person"
                   />
-                  <input class="form__input" type="number" placeholder="0" />
+                  <input
+                    class="form__input"
+                    type="text"
+                    placeholder="0"
+                    id="people"
+                  />
                 </div>
               </form>
             </div>
@@ -74,16 +91,21 @@
                     <p class="display__tip">
                       <span>Tip Amount</span> <span>/ person</span>
                     </p>
-                    <p class="display__total">$0.00</p>
+                    <p class="display__amount" id="tip-amount">$0.00</p>
                   </div>
                   <div class="display__item">
                     <p class="display__tip">
                       <span>Total</span> <span>/ person</span>
                     </p>
-                    <p class="display__total">$0.00</p>
+                    <p class="display__amount" id="total-amount">$0.00</p>
                   </div>
                 </div>
-                <button type="button" disabled class="button button--reset">
+                <button
+                  type="button"
+                  disabled
+                  class="button button-reset"
+                  id="reset"
+                >
                   reset
                 </button>
               </div>
@@ -99,5 +121,6 @@
         <a href="https://github.com/luismacode" target="_blank">luismacode</a>.
       </footer>
     </div>
+    <script src="js/index.js" type="module"></script>
   </body>
 </html>

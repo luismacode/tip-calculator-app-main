@@ -34,7 +34,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [solution]()
+- Solution URL: [solution](https://www.frontendmentor.io/solutions/tipcalculatorappmain-l6s_AyOQWt)
 - Live Site URL: [live site](https://luismacode.github.io/tip-calculator-app-main/)
 
 ## My process
@@ -53,18 +53,18 @@ Users should be able to:
 
 Through the development of this challenge I learned:
 
-1. Use setCurrency function for convert from number to US currency format
+- Use setCurrency function for convert from number to US currency format
 
-  ```js
+```js
    const setCurrency = (currency) => {
     return currency.toLocaleString("en-US", {
     style: "currency",
     currency: "USD",
-  });
-};
+    } );
+  };
   ```
 
-2. Use this code snippet for remove the percentage symbol of the tip field and convert  to number.
+- Use this code snippet for remove the percentage symbol of the tip field and convert  to number.
 
 ```js
   const getTip = (tip) => {
@@ -72,7 +72,7 @@ Through the development of this challenge I learned:
   };
 ```
 
-3. I use this code snippet to reset styles that were added when an error occurs or when the value of the fields has been validated.
+- I use this code snippet to reset styles that were added when an error occurs or when the value of the fields has been validated.
 
 ```js
   function resetStyles(...inputs) {
@@ -82,7 +82,7 @@ Through the development of this challenge I learned:
 }
 ```
 
-4. I use this code snippet to reset values of the fields and and disable the reset button again.
+- I use this code snippet to reset values of the fields and and disable the reset button again.
 
 ```js
   function resetValues(reset, ...inputs) {
@@ -93,7 +93,7 @@ Through the development of this challenge I learned:
   }
 ```
 
-5. I Use this small code to add and remove css class when you click an option button.
+- I Use this small code to add and remove css class when you click an option button.
 
 ```js
   options.forEach((opt) => {
@@ -117,7 +117,7 @@ Although this small project is functional in my opinion there is always somethin
 
 ## Author
 
-- Linkedin - [luismachaca](www.linkedin.com/in/luismachaca)
+- Linkedin - [luismachaca](https://www.linkedin.com/in/luismachaca)
 - Frontend Mentor - [@luismacode](https://www.frontendmentor.io/profile/luismacode)
 - Twitter - [@luismacode](https://www.twitter.com/luismacode)
 
